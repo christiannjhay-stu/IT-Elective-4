@@ -34,7 +34,7 @@ function App() {
               <div className="card-body">
                 <h5 className="card-title">{post.title}</h5>
                 <p className="card-text">{post.body}</p>
-                <button className="btn btn-primary" onClick={() => handleClick(post.title)}>Click me</button>
+                <button className="btn btn-primary" onClick={() => handleClick(post.title)}>Like</button>
               </div>
             </div>
           </div>
