@@ -30,7 +30,13 @@ function App() {
       <div className="row justify-content-center">
         {posts.map(post => (
           <div className="col-md-4 mb-3" key={post.id}>
-            <Card title={post.title} body={post.body} onClick={() => handleClick(post.title)} />
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">{post.title}</h5>
+                <p className="card-text">{post.body}</p>
+                <button className="btn btn-primary" onClick={() => handleClick(post.title)}>Click me</button>
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -39,4 +45,3 @@ function App() {
 }
 
 export default App;
-
