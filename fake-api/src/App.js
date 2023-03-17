@@ -1,16 +1,5 @@
 import { useState, useEffect } from 'react';
 
-function Card({ title, body, onClick }) {
-  return (
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text">{body}</p>
-        <button className="btn btn-primary" onClick={onClick}>Click me</button>
-      </div>
-    </div>
-  );
-}
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -19,6 +8,7 @@ function App() {
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then(response => response.json())
       .then(data => setPosts(data));
+      document.title = "Fake Api";
   }, []);
 
   function handleClick(title) {
